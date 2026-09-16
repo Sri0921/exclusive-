@@ -38,3 +38,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchBtn = document.getElementById("searchBtn");
+  const searchBox = document.getElementById("searchBox");
+  const searchInput = document.getElementById("searchInput");
+  const closeSearch = document.getElementById("closeSearch");
+
+  // Open search bar
+  searchBtn.addEventListener("click", function () {
+    searchBox.classList.add("active");
+    searchInput.focus();
+  });
+
+  // Close search bar
+  closeSearch.addEventListener("click", function () {
+    searchBox.classList.remove("active");
+    searchInput.value = "";
+
+    // Show all articles again
+    document.querySelectorAll(".card, .side-story, .trending li").forEach(function (item) {
+      item.style.display = "";
+    });
+  });
+
+  // Search articles
+  searchInput.addEventListener("input", function () {
+
+    const searchTerm = searchInput.value.toLowerCase().trim();
+
+    const articles = document.querySelectorAll(
+      ".card, .side-story, .trending li"
+    );
+
+    articles.forEach(function (article) {
+
+      const articleText = article.textContent.toLowerCase();
+
+      if (articleText.includes(searchTerm)) {
+        article.style.display = "";
+      } else {
+        article.style.display = "none";
+      }
+
+    });
+
+  });
+
+});
