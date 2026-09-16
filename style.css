@@ -109,55 +109,6 @@ button{ font-family: inherit; cursor:pointer; }
 }
 .icon-btn:hover{ border-color: var(--gold); color: var(--gold-soft); }
 
-.subscribe-btn{
-  background: var(--pink);
-  color: #fff;
-  border: none;
-  padding: 9px 18px;
-  font-weight: 700;
-  font-size: 0.82rem;
-  letter-spacing: 0.01em;
-  border-radius: 3px;
-  transition: background .15s ease;
-}
-.subscribe-btn:hover{ background: var(--pink-deep); }
-
-.nav-toggle{
-  display:none;
-  background:none;
-  border:none;
-  color: var(--ink);
-  width: 38px; height: 38px;
-}
-
-nav.primary-nav{
-  border-top: 1px solid var(--hairline-soft);
-  max-width: var(--maxw);
-  margin: 0 auto;
-}
-nav.primary-nav ul{
-  display:flex;
-  gap: 28px;
-  padding: 12px var(--gutter);
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-nav.primary-nav ul::-webkit-scrollbar{ display:none; }
-nav.primary-nav a{
-  font-size: 0.86rem;
-  font-weight: 600;
-  color: var(--ink-muted);
-  white-space: nowrap;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: color .15s ease, border-color .15s ease;
-}
-nav.primary-nav a:hover,
-nav.primary-nav a.is-active{
-  color: var(--ink);
-  border-color: var(--pink);
-}
-
 /* breaking ticker */
 .ticker{
   background: var(--bg-raised);
