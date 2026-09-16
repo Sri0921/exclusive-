@@ -577,3 +577,46 @@ footer{ padding: 48px var(--gutter) 32px; max-width: var(--maxw); margin:0 auto;
     font-size: 16px;
     white-space: nowrap;
 }
+/* ==============================
+   TOP CATEGORY NAVIGATION
+   ============================== */
+
+.primary-nav {
+    display: block !important;
+    width: 100%;
+    border-top: 1px solid #2d2226;
+    border-bottom: 1px solid #2d2226;
+}
+
+.primary-nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.primary-nav li {
+    display: block !important;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-nav li a {
+    display: block;
+    padding: 14px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.primary-nav li a:hover,
+.primary-nav li a.is-active {
+    color: #e93b5b;
+}
